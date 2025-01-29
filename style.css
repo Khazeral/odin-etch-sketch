@@ -1,0 +1,16 @@
+.case {
+  width: 40px;
+  height: 40px;
+  border: 1px solid white;
+}
+
+.line {
+  display: flex;
+  width: min-content;
+}
+
+.container-table {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
