@@ -1,7 +1,7 @@
 .case {
   width: 40px;
   height: 40px;
-  border: 1px solid white;
+  border: 1px solid black;
 }
 
 .line {
@@ -10,6 +10,7 @@
 }
 
 .container-table {
+  max-width: 40vw;
   display: flex;
   justify-content: center;
   align-items: center;
