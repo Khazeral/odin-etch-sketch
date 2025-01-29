@@ -2,10 +2,19 @@ const cases = document.getElementsByClassName("case");
 const button = document.querySelector("button");
 const container = document.getElementById("container-table");
 const dimension = 0;
+let opacity = 10
+
+const increaseOpacity = () => {
+    if(opacity <=90){
+        console.log(opacity)
+        opacity += 10
+    }
+}
 
 Array.from(cases).forEach((element) => {
   element.addEventListener("mouseenter", () => {
-    element.style.backgroundColor = "red";
+    element.style.backgroundColor = `rgb(255 0 0 / ${opacity}%)`;
+    increaseOpacity()
   });
 });
 
@@ -34,7 +43,8 @@ const buildCanvas = (dimension) => {
       const square = document.createElement("div");
       square.className = "case";
       square.addEventListener("mouseenter", () => {
-        square.style.backgroundColor = "red";
+        square.style.backgroundColor = `rgb(255 0 0 / ${opacity}%)`;
+        increaseOpacity()
       });
       line.appendChild(square);
     }
