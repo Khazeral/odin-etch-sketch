@@ -3,9 +3,18 @@ const button = document.querySelector("button");
 const container = document.getElementById("container-table");
 const dimension = 0;
 
+const getRandomColor = () => {
+    const letters = '0123456789ABCDEF';
+    let color = '#';
+    for (let i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+}
+
 Array.from(cases).forEach((element) => {
   element.addEventListener("mouseenter", () => {
-    element.style.backgroundColor = "red";
+    element.style.backgroundColor = getRandomColor();
   });
 });
 
@@ -34,7 +43,7 @@ const buildCanvas = (dimension) => {
       const square = document.createElement("div");
       square.className = "case";
       square.addEventListener("mouseenter", () => {
-        square.style.backgroundColor = "red";
+        square.style.backgroundColor = getRandomColor();
       });
       line.appendChild(square);
     }
